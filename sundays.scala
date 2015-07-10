@@ -21,8 +21,8 @@ class date(val year: Int = 1901, var month: Int = 1, val monthDay: Int = 1, var 
 }
 
 val fin = new date(2000, 12, 31, 1)
-def countSundays(d: date, sum: Int = 0): Int = {
+def countSundays(d: date, sum: Int = 0): Int = { //off by 1 lol the answer is 171 not 172
 	println(d)
 	if(d equals fin) return sum + 1
-	if(d.monthDay == 1 && d.weekDay == 1) countSundays(d.next, sum + 1) else countSundays(d.next, sum)
+	if(d.monthDay == 1 && d.weekDay == 1) countSundays(d.next, sum + 1) else countSundays(d.next, sum) 
 }
